@@ -1,0 +1,21 @@
+# Ignore VSCode settings and workspace files
+*.code-workspace
+
+# Ignore Windows system files
+Thumbs.db
+
+# Ignore executable files
+*.exe
+
+
+# Ignore log and temporary files
+*.log
+*.tmp
+*.bak
+
+# Ignore compiled object files
+*.o
+*.obj
+
+# Ignore core dump files
+core.*

@@ -26,7 +26,7 @@ This table is regularly updated as I solve more problems.
 
 1. **Cloning the Repository:**
    ```
-   git clone https://github.com/your-username/dsa-journey
+   git clone https://github.com/Sanskargupta0/TUF--DSA-with-cpp.git
    ```
 2. Navigate to specific topic folders to explore the problems and their solutions.
 
