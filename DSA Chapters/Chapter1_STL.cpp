@@ -289,6 +289,120 @@ void explainSet(){
     }
 }
 
+void explainMultiset(){
+    // multiset is a container that stores multiple elements following a specific order
+    multiset<int> st;
+    st.insert(1); // {1}
+    st.emplace(2); // {1, 2}
+    st.insert(4); // {1, 2, 4}
+    st.insert(3); // {1, 2, 3, 4}
+    st.insert(3); // {1, 2, 3, 3, 4}
+
+    //Functionality of set is same as vector
+    // insert(), erase(), clear(), empty(), size()
+    // begin(), end(), rbegin(), rend(), find()
+
+    //set<int>::iterator it = st.find(3);
+
+    st.erase(3); // {1, 2, 4}
+}
+
+void explainUSet(){
+
+    // Lowerbound and Upperbound function
+    // does not work in Unordered set
+
+}
+
+void explainMap(){
+
+    map<int, int> mpp;
+    // everything stored in the map is in the form of key value pair
+    // map store keys in sorted order
+
+    mpp[1] = 2;
+    mpp.emplace(2, 3);
+    mpp.insert({3, 4});
+
+    // itrating through the map
+    for (auto it : mpp) {
+        cout << it.first << " " << it.second << endl;
+    }
+
+    map<int, int>::iterator it = mpp.find(2);
+
+    cout<<it->first<<" "<<it->second<<endl;
+
+
+}
+
+void explainMultiMap(){
+    // everthing is same as map but it can store multiple values for a single key
+}
+
+void explainUMap(){
+    // same as map but it stores the keys in unsorted order
+}
+
+bool comp ( pair<int, int> p1, pair<int, int> p2){
+        if (p1.second < p2.second) return true;
+        if (p1.second > p2.second) return false;
+        return p1.first > p2.first;
+
+    }
+
+void algorihtms(){
+    
+    int arr[] = {4,3,2,1,5,6,7,8,9,10};
+
+    // sort the array
+    sort(arr, arr+10);
+
+    // inbuild comparator
+
+    // decreasing order
+    sort(arr, arr+10, greater<int>());
+
+
+    pair<int, int> arr1[] = {{1, 2}, {2, 1}, {4, 1}};
+
+    // sort it according to the second element of the pair
+    // if the second element is same then sort it according to the first element but in decreasing order
+
+    
+
+    sort (arr1, arr1+3, comp);
+
+    for(int i=0; i<3; i++){
+        cout<<arr1[i].first<<" "<<arr1[i].second<<endl;
+    }
+
+    // __buildin_popcount() function is used to count 
+    //the number of set bits in the binary representation of a number
+
+    int num = 7;
+    cout<<__builtin_popcount(num)<<endl;
+
+   string s = "123";
+
+    // next_permutation() function is used to rearrange 
+    //the elements in the range [first, last) into the next
+    // lexicographically greater permutation. 
+
+    do{
+        cout<<s<<endl;
+    }while(next_permutation(s.begin(), s.end()));
+
+    int maxi = *max_element(arr, arr+10);
+
+    int mini = *min_element(arr, arr+10);
+
+    cout<<maxi<<" "<<mini<<endl;
+
+
+}
+
+
 
 int main(){
     //pairs();
@@ -298,6 +412,12 @@ int main(){
     //explainStack();
     //explainQueue();
     //exlplainPriority_queue();
-    explainSet();
+    //explainSet();
+    //explainMultiset();
+    //explainUSet();
+    //explainMap();
+    //explainMultiMap();
+    //explainUMap();
+    algorihtms();
     return 0;
 }
